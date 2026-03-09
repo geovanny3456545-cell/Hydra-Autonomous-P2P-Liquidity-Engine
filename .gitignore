@@ -1,0 +1,10 @@
+# Hydra Security Filter
+config.py
+*.log
+*.json
+__pycache__/
+.env
+.DS_Store
+*.sh
+!README.md
+!*.py
