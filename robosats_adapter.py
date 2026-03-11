@@ -55,7 +55,7 @@ class RoboSatsAPI:
         self.derived_token = base91_encode(sha256_hash)
 
         self.proxies = {'http': proxy_url, 'https': proxy_url} if proxy_url else None
-        self.base_url = "http://librebazovfmmkyi2jekraxsuso3mh622avuuzqpejixdl5dhuhb4tid.onion/api"
+        self.base_url = os.getenv("ROBOSATS_BASE_URL", "http://librebazovfmmkyi2jekraxsuso3mh622avuuzqpejixdl5dhuhb4tid.onion/api")
 
     def _get_auth_header(self):
         """Constructs the Ghost Protocol multi-auth header."""
